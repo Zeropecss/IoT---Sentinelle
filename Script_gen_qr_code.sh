@@ -1,16 +1,21 @@
 #!/bin/bash
 
-# Extraction de l'adresse MAC Bluetooth
-MAC_ADDR=$(hciconfig hci0 | grep -oE "([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}")
+# Définition des fichiers de sortie
+CONFIG_FILE="config_sentinel.json"
+QR_IMAGE="sentinel_qr.png"
 
-# Génération des UUID de service et de caractéristique
+# Extraction de l'adresse MAC de l'adaptateur Bluetooth hci0
+MAC_ADDR=$(cat /sys/class/bluetooth/hci0/address | tr '[:lower:]' '[:upper:]')
+
+# Génération des UUID pour le Service et la Caractéristique GATT
 SERVICE_UUID=$(uuidgen)
 CHAR_UUID=$(uuidgen)
 
-# Génération de la clé AES-128 (16 octets / 32 caractères hex)
+# Génération d'une clé AES-128 (16 octets / 32 caractères hexadécimaux)
 AES_KEY=$(openssl rand -hex 16)
 
-# Création du payload JSON
+# Construction du payload JSON compact
+# m: MAC, s: Service UUID, c: Char UUID, k: AES Key
 PAYLOAD=$(jq -n \
   --arg m "$MAC_ADDR" \
   --arg s "$SERVICE_UUID" \
@@ -18,10 +23,13 @@ PAYLOAD=$(jq -n \
   --arg k "$AES_KEY" \
   '{m: $m, s: $s, c: $c, k: $k}')
 
-# Génération du QR Code sous forme d'image
-echo "$PAYLOAD" | qrencode -o sentinel_qr.png
+# Sauvegarde de la configuration technique
+echo "$PAYLOAD" > "$CONFIG_FILE"
 
-# Sauvegarde de la configuration pour le processus BLE
-echo "$PAYLOAD" > config_ble.json
+# Génération du QR Code statique
+echo "$PAYLOAD" | qrencode -s 6 -o "$QR_IMAGE"
 
-echo "QR Code généré pour l'adresse $MAC_ADDR"
+echo "Provisionnement terminé."
+echo "Adresse MAC : $MAC_ADDR"
+echo "Service UUID : $SERVICE_UUID"
+echo "Configuration sauvegardée dans $CONFIG_FILE"
