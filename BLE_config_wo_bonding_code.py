@@ -42,6 +42,9 @@ def setup_agent():
     print("Agent de sécurité configuré en mode 'Just Works'.")
 
 def run_sentinel():
+    # Must be called BEFORE any dbus usage
+    dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
+    
     try:
         with open('config_sentinel.json', 'r') as f:
             config = json.load(f)
@@ -49,19 +52,32 @@ def run_sentinel():
         print("Erreur : Fichier de configuration absent.")
         return
 
-    setup_agent()
+    # Setup agent BEFORE creating the peripheral
+    bus = dbus.SystemBus()
+    agent = JustWorksAgent(bus, AGENT_PATH)
+    obj = bus.get_object(BUS_NAME, "/org/bluez")
+    manager = dbus.Interface(obj, "org.bluez.AgentManager1")
+    manager.RegisterAgent(AGENT_PATH, "NoInputNoOutput")
+    manager.RequestDefaultAgent(AGENT_PATH)
+    print("Agent configuré.")
 
     adpt = list(adapter.Adapter.available())[0]
-    app = peripheral.Peripheral(adpt.address, local_name='Sentinel-TEST')
     
-    app.add_service(srv_id=1, uuid=config['s'], primary=True)
-    app.add_characteristic(srv_id=1, chr_id=1, uuid=config['c'],
-                                value=[], notifying=False,
-                                flags=['read'], 
-                                read_callback=lambda: list(open("data_environnement.csv", "rb").read()))
+    # Make adapter explicitly pairable and discoverable
+    adpt.pairable = True
+    adpt.discoverable = True
 
-    print(f"Sentinelle prête sur {config['m']}. Lancez la connexion depuis le smartphone.")
-    app.publish()
+    app = peripheral.Peripheral(adpt.address, local_name='Sentinel-TEST')
+    app.add_service(srv_id=1, uuid=config['s'], primary=True)
+    app.add_characteristic(
+        srv_id=1, chr_id=1, uuid=config['c'],
+        value=[], notifying=False,
+        flags=['read'],
+        read_callback=lambda: list(open("data_environnement.csv", "rb").read())
+    )
+
+    print(f"Sentinelle prête. Lancez la connexion depuis le smartphone.")
+    app.publish()  # This blocks on the mainloop
 
 if __name__ == '__main__':
     run_sentinel()
