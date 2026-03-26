@@ -1,0 +1,1030 @@
+        Latency: 119 msec (30-299 msec ~103 msec)
+        #210: len 9 (1 Kb/s)
+        Latency: 60 msec (30-299 msec ~82 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 9                                                  #217 [hci0] 130.988763
+      ATT: Error Response (0x01) len 4
+        Read By Group Type Request (0x10)
+        Handle: 0x0001
+        Error: Unsupported Group Type (0x10)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 11                                #218 [hci0] 130.989014
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0001-0xffff
+        Attribute type: Include (0x2802)
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #219 [hci0] 131.018808
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0005-0x0005
+        Attribute type: Characteristic (0x2803)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #220 [hci0] 131.019049
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0005
+        Error: Attribute Not Found (0x0a)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #221 [hci0] 131.019372
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 2
+        #213: len 11 (0 Kb/s)
+        Latency: 89 msec (30-299 msec ~85 msec)
+        #215: len 20 (2 Kb/s)
+        Latency: 60 msec (30-299 msec ~73 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 9                                                  #222 [hci0] 131.050002
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0001
+        Error: Attribute Not Found (0x0a)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 11                                #223 [hci0] 131.050229
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0001-0xffff
+        Attribute type: Characteristic (0x2803)
+> HCI Event: LE Meta Event (0x3e) plen 10                                                   #224 [hci0] 131.050681
+      LE Connection Update Complete (0x03)
+        Status: Success (0x00)
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Connection interval: 7.50 msec (0x0006)
+        Connection latency: 0 (0x0000)
+        Supervision timeout: 5000 msec (0x01f4)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #225 [hci0] 131.057774
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 2
+        #218: len 11 (1 Kb/s)
+        Latency: 68 msec (30-299 msec ~70 msec)
+        #220: len 9 (1 Kb/s)
+        Latency: 38 msec (30-299 msec ~54 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #226 [hci0] 131.065083
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0006-0x000f
+        Attribute type: Include (0x2802)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #227 [hci0] 131.065375
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0006
+        Error: Attribute Not Found (0x0a)
+> ACL Data RX: Handle 64 flags 0x02 dlen 244                                                #228 [hci0] 131.068293
+      ATT: Read By Type Response (0x09) len 239
+        Attribute data length: 7
+        Attribute data list: 34 entries
+        Handle: 0x0002
+        Value[5]: 200300052a
+            Properties: 0x20
+              Indicate (0x20)
+            Value Handle: 0x0003
+            Value UUID: Service Changed (0x2a05)
+        Handle: 0x0004
+        Value[5]: 0205003a2b
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x0005
+            Value UUID: Server Supported Features (0x2b3a)
+        Handle: 0x0006
+        Value[5]: 0a0700292b
+            Properties: 0x0a
+              Read (0x02)
+              Write (0x08)
+            Value Handle: 0x0007
+            Value UUID: Client Supported Features (0x2b29)
+        Handle: 0x0008
+        Value[5]: 0209002a2b
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x0009
+            Value UUID: Database Hash (0x2b2a)
+        Handle: 0x0015
+        Value[5]: 021600002a
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x0016
+            Value UUID: Device Name (0x2a00)
+        Handle: 0x0017
+        Value[5]: 021800012a
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x0018
+            Value UUID: Appearance (0x2a01)
+        Handle: 0x0019
+        Value[5]: 021a00a62a
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x001a
+            Value UUID: Central Address Resolution (0x2aa6)
+        Handle: 0x0029
+        Value[5]: 122a00932b
+            Properties: 0x12
+              Read (0x02)
+              Notify (0x10)
+            Value Handle: 0x002a
+            Value UUID: Media Player Name (0x2b93)
+        Handle: 0x002c
+        Value[5]: 102d00962b
+            Properties: 0x10
+              Notify (0x10)
+            Value Handle: 0x002d
+            Value UUID: Track Changed (0x2b96)
+        Handle: 0x002f
+        Value[5]: 123000972b
+            Properties: 0x12
+              Read (0x02)
+              Notify (0x10)
+            Value Handle: 0x0030
+            Value UUID: Track Title (0x2b97)
+        Handle: 0x0032
+        Value[5]: 123300982b
+            Properties: 0x12
+              Read (0x02)
+              Notify (0x10)
+            Value Handle: 0x0033
+            Value UUID: Track Duration (0x2b98)
+        Handle: 0x0035
+        Value[5]: 1e3600992b
+            Properties: 0x1e
+              Read (0x02)
+              Write Without Response (0x04)
+              Write (0x08)
+              Notify (0x10)
+            Value Handle: 0x0036
+            Value UUID: Track Position (0x2b99)
+        Handle: 0x0038
+        Value[5]: 1e39009a2b
+            Properties: 0x1e
+              Read (0x02)
+              Write Without Response (0x04)
+              Write (0x08)
+              Notify (0x10)
+            Value Handle: 0x0039
+            Value UUID: Playback Speed (0x2b9a)
+        Handle: 0x003b
+        Value[5]: 123c009b2b
+            Properties: 0x12
+              Read (0x02)
+              Notify (0x10)
+            Value Handle: 0x003c
+            Value UUID: Seeking Speed (0x2b9b)
+        Handle: 0x003e
+        Value[5]: 1e3f00a12b
+            Properties: 0x1e
+              Read (0x02)
+              Write Without Response (0x04)
+              Write (0x08)
+              Notify (0x10)
+            Value Handle: 0x003f
+            Value UUID: Playing Order (0x2ba1)
+        Handle: 0x0041
+        Value[5]: 024200a22b
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x0042
+            Value UUID: Playing Orders Supported (0x2ba2)
+        Handle: 0x0043
+        Value[5]: 124400a32b
+            Properties: 0x12
+              Read (0x02)
+              Notify (0x10)
+            Value Handle: 0x0044
+            Value UUID: Media State (0x2ba3)
+        Handle: 0x0046
+        Value[5]: 1c4700a42b
+            Properties: 0x1c
+              Write Without Response (0x04)
+              Write (0x08)
+              Notify (0x10)
+            Value Handle: 0x0047
+            Value UUID: Media Control Point (0x2ba4)
+        Handle: 0x0049
+        Value[5]: 124a00a52b
+            Properties: 0x12
+              Read (0x02)
+              Notify (0x10)
+            Value Handle: 0x004a
+            Value UUID: Media Control Point Opcodes Supported (0x2ba5)
+        Handle: 0x004c
+        Value[5]: 024d00ba2b
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x004d
+            Value UUID: Content Control ID (0x2bba)
+        Handle: 0x005b
+        Value[5]: 125c00b32b
+            Properties: 0x12
+              Read (0x02)
+              Notify (0x10)
+            Value Handle: 0x005c
+            Value UUID: Bearer Provider Name (0x2bb3)
+        Handle: 0x005e
+        Value[5]: 025f00b42b
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x005f
+            Value UUID: Bearer UCI (0x2bb4)
+        Handle: 0x0060
+        Value[5]: 126100b52b
+            Properties: 0x12
+              Read (0x02)
+              Notify (0x10)
+            Value Handle: 0x0061
+            Value UUID: Bearer Technology (0x2bb5)
+        Handle: 0x0063
+        Value[5]: 126400b62b
+            Properties: 0x12
+              Read (0x02)
+              Notify (0x10)
+            Value Handle: 0x0064
+            Value UUID: Bearer URI Schemes Supported List (0x2bb6)
+        Handle: 0x0066
+        Value[5]: 126700b92b
+            Properties: 0x12
+              Read (0x02)
+              Notify (0x10)
+            Value Handle: 0x0067
+            Value UUID: Bearer List Current Calls (0x2bb9)
+        Handle: 0x0069
+        Value[5]: 026a00ba2b
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x006a
+            Value UUID: Content Control ID (0x2bba)
+        Handle: 0x006b
+        Value[5]: 126c00bb2b
+            Properties: 0x12
+              Read (0x02)
+              Notify (0x10)
+            Value Handle: 0x006c
+            Value UUID: Status Flags (0x2bbb)
+        Handle: 0x006e
+        Value[5]: 126f00bd2b
+            Properties: 0x12
+              Read (0x02)
+              Notify (0x10)
+            Value Handle: 0x006f
+            Value UUID: Call State (0x2bbd)
+        Handle: 0x0071
+        Value[5]: 1c7200be2b
+            Properties: 0x1c
+              Write Without Response (0x04)
+              Write (0x08)
+              Notify (0x10)
+            Value Handle: 0x0072
+            Value UUID: Call Control Point (0x2bbe)
+        Handle: 0x0074
+        Value[5]: 027500bf2b
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x0075
+            Value UUID: Call Control Point Optional Opcodes (0x2bbf)
+        Handle: 0x0076
+        Value[5]: 107700c02b
+            Properties: 0x10
+              Notify (0x10)
+            Value Handle: 0x0077
+            Value UUID: Termination Reason (0x2bc0)
+        Handle: 0x0079
+        Value[5]: 127a00c12b
+            Properties: 0x12
+              Read (0x02)
+              Notify (0x10)
+            Value Handle: 0x007a
+            Value UUID: Incoming Call (0x2bc1)
+        Handle: 0x007c
+        Value[5]: 127d00c22b
+            Properties: 0x12
+              Read (0x02)
+              Notify (0x10)
+            Value Handle: 0x007d
+            Value UUID: Call Friendly Name (0x2bc2)
+        Handle: 0x0083
+        Value[5]: 028400512b
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x0084
+            Value UUID: Telephony and Media Audio Profile Role (0x2b51)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 11                                #229 [hci0] 131.068520
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0084-0xffff
+        Attribute type: Characteristic (0x2803)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #230 [hci0] 131.073011
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 2
+        #223: len 11 (4 Kb/s)
+        Latency: 22 msec (22-299 msec ~38 msec)
+        #227: len 9 (10 Kb/s)
+        Latency: 7 msec (7-299 msec ~23 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #231 [hci0] 131.080085
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0006-0x000f
+        Attribute type: Characteristic (0x2803)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 27                                #232 [hci0] 131.080424
+      ATT: Read By Type Response (0x09) len 22
+        Attribute data length: 7
+        Attribute data list: 3 entries
+        Handle: 0x0007
+        Value[5]: 200800052a
+            Properties: 0x20
+              Indicate (0x20)
+            Value Handle: 0x0008
+            Value UUID: Service Changed (0x2a05)
+        Handle: 0x000a
+        Value[5]: 0a0b00292b
+            Properties: 0x0a
+              Read (0x02)
+              Write (0x08)
+            Value Handle: 0x000b
+            Value UUID: Client Supported Features (0x2b29)
+        Handle: 0x000c
+        Value[5]: 020d002a2b
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x000d
+            Value UUID: Database Hash (0x2b2a)
+> ACL Data RX: Handle 64 flags 0x02 dlen 69                                                 #233 [hci0] 131.081236
+      ATT: Read By Type Response (0x09) len 64
+        Attribute data length: 21
+        Attribute data list: 3 entries
+        Handle: 0x0091
+        Value[19]: 029200b5f364314f2e9182744e1bef02003ee7
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x0092
+            Value UUID: Vendor specific (e73e0002-ef1b-4e74-8291-2e4f3164f3b5)
+        Handle: 0x0094
+        Value[19]: 2895002581e88c722e8f97ea11db31e6364a59
+            Properties: 0x28
+              Write (0x08)
+              Indicate (0x20)
+            Value Handle: 0x0095
+            Value UUID: Vendor specific (594a36e6-31db-11ea-978f-2e728ce88125)
+        Handle: 0x0097
+        Value[19]: 0c98002581e88c722e8f97ea11db3110304a59
+            Properties: 0x0c
+              Write Without Response (0x04)
+              Write (0x08)
+            Value Handle: 0x0098
+            Value UUID: Vendor specific (594a3010-31db-11ea-978f-2e728ce88125)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 11                                #234 [hci0] 131.081483
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0098-0xffff
+        Attribute type: Characteristic (0x2803)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #235 [hci0] 131.088141
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 2
+        #229: len 11 (4 Kb/s)
+        Latency: 19 msec (7-299 msec ~21 msec)
+        #232: len 27 (30 Kb/s)
+        Latency: 7 msec (7-299 msec ~14 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #236 [hci0] 131.095084
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x000d-0x000f
+        Attribute type: Characteristic (0x2803)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #237 [hci0] 131.095403
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x000d
+        Error: Attribute Not Found (0x0a)
+> ACL Data RX: Handle 64 flags 0x02 dlen 9                                                  #238 [hci0] 131.095481
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0098
+        Error: Attribute Not Found (0x0a)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #239 [hci0] 131.096025
+      ATT: Find Information Request (0x04) len 4
+        Handle range: 0x0099-0xffff
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #240 [hci0] 131.102996
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 2
+        #234: len 11 (4 Kb/s)
+        Latency: 21 msec (7-299 msec ~18 msec)
+        #237: len 9 (10 Kb/s)
+        Latency: 7 msec (7-299 msec ~12 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 9                                                  #241 [hci0] 131.110068
+      ATT: Find Information Request (0x04) len 4
+        Handle range: 0x0009-0x0009
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 10                                #242 [hci0] 131.110333
+      ATT: Find Information Response (0x05) len 5
+        Format: UUID-16 (0x01)
+        Handle: 0x0009
+        UUID: Client Characteristic Configuration (0x2902)
+> ACL Data RX: Handle 64 flags 0x02 dlen 24                                                 #243 [hci0] 131.111028
+      ATT: Find Information Response (0x05) len 19
+        Format: UUID-128 (0x02)
+        Handle: 0x0099
+        UUID: Vendor specific (594a3952-31db-11ea-978f-2e728ce88125)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #244 [hci0] 131.111312
+      ATT: Find Information Request (0x04) len 4
+        Handle range: 0x009a-0xffff
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #245 [hci0] 131.118004
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 2
+        #239: len 9 (3 Kb/s)
+        Latency: 21 msec (7-299 msec ~17 msec)
+        #242: len 10 (11 Kb/s)
+        Latency: 7 msec (7-299 msec ~12 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 9                                                  #246 [hci0] 131.125067
+      ATT: Find Information Request (0x04) len 4
+        Handle range: 0x000e-0x000f
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #247 [hci0] 131.125287
+      ATT: Error Response (0x01) len 4
+        Find Information Request (0x04)
+        Handle: 0x000e
+        Error: Attribute Not Found (0x0a)
+> ACL Data RX: Handle 64 flags 0x02 dlen 9                                                  #248 [hci0] 131.125484
+      ATT: Error Response (0x01) len 4
+        Find Information Request (0x04)
+        Handle: 0x009a
+        Error: Attribute Not Found (0x0a)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 11                                #249 [hci0] 131.126237
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0001-0xffff
+        Attribute type: Database Hash (0x2b2a)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #250 [hci0] 131.132996
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 2
+        #244: len 9 (3 Kb/s)
+        Latency: 21 msec (7-299 msec ~17 msec)
+        #247: len 9 (10 Kb/s)
+        Latency: 7 msec (7-299 msec ~12 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #251 [hci0] 131.140077
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0010-0x0012
+        Attribute type: Include (0x2802)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #252 [hci0] 131.140287
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0010
+        Error: Attribute Not Found (0x0a)
+> ACL Data RX: Handle 64 flags 0x02 dlen 24                                                 #253 [hci0] 131.147648
+      ATT: Read By Type Response (0x09) len 19
+        Attribute data length: 18
+        Attribute data list: 1 entry
+        Handle: 0x0009
+        Value[16]: 8a3eadd4aef49a49dc575516f4663a43
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 11                                #254 [hci0] 131.147941
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x000a-0xffff
+        Attribute type: Database Hash (0x2b2a)
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #255 [hci0] 131.155046
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0010-0x0012
+        Attribute type: Characteristic (0x2803)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 13                                #256 [hci0] 131.155369
+      ATT: Read By Type Response (0x09) len 8
+        Attribute data length: 7
+        Attribute data list: 1 entry
+        Handle: 0x0011
+        Value[5]: 021200502a
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x0012
+            Value UUID: PnP ID (0x2a50)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #257 [hci0] 131.155477
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 2
+        #249: len 11 (3 Kb/s)
+        Latency: 29 msec (7-299 msec ~20 msec)
+        #252: len 9 (4 Kb/s)
+        Latency: 15 msec (7-299 msec ~18 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 9                                                  #258 [hci0] 131.162509
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x000a
+        Error: Attribute Not Found (0x0a)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 8                                 #259 [hci0] 131.168370
+      ATT: Write Request (0x12) len 3
+        Handle: 0x0007 Type: Client Supported Features (0x2b29)
+          Data[1]: 05
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #260 [hci0] 131.170891
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0012-0x0012
+        Attribute type: Characteristic (0x2803)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #261 [hci0] 131.170916
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 2
+        #254: len 11 (4 Kb/s)
+        Latency: 22 msec (7-299 msec ~20 msec)
+        #256: len 13 (6 Kb/s)
+        Latency: 15 msec (7-299 msec ~18 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 5                                                  #262 [hci0] 131.177505
+      ATT: Write Response (0x13) len 0
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #263 [hci0] 131.180273
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0012
+        Error: Attribute Not Found (0x0a)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 7                                 #264 [hci0] 131.180301
+      ATT: Read Request (0x0a) len 2
+        Handle: 0x0016 Type: Device Name (0x2a00)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #265 [hci0] 131.185521
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 2
+        #259: len 8 (3 Kb/s)
+        Latency: 17 msec (7-299 msec ~17 msec)
+        #263: len 9 (14 Kb/s)
+        Latency: 5 msec (5-299 msec ~11 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #266 [hci0] 131.192602
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0013-0x0017
+        Attribute type: Include (0x2802)
+> ACL Data RX: Handle 64 flags 0x02 dlen 20                                                 #267 [hci0] 131.193108
+      ATT: Read Response (0x0b) len 15
+        Value[15]: 5332332b20646520416e74686f6e79
+        Handle: 0x0016 Type: Device Name (0x2a00)
+        Value[15]: 5332332b20646520416e74686f6e79
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #268 [hci0] 131.193159
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0013
+        Error: Attribute Not Found (0x0a)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 7                                 #269 [hci0] 131.193282
+      ATT: Read Request (0x0a) len 2
+        Handle: 0x0018 Type: Appearance (0x2a01)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #270 [hci0] 131.200537
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 2
+        #264: len 7 (2 Kb/s)
+        Latency: 20 msec (5-299 msec ~15 msec)
+        #268: len 9 (10 Kb/s)
+        Latency: 7 msec (5-299 msec ~11 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #271 [hci0] 131.207619
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0013-0x0017
+        Attribute type: Characteristic (0x2803)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 27                                #272 [hci0] 131.207985
+      ATT: Read By Type Response (0x09) len 22
+        Attribute data length: 21
+        Attribute data list: 1 entry
+        Handle: 0x0014
+        Value[19]: 1e1500f36b109d66f2a9a112416838dbe57277
+            Properties: 0x1e
+              Read (0x02)
+              Write Without Response (0x04)
+              Write (0x08)
+              Notify (0x10)
+            Value Handle: 0x0015
+            Value UUID: Vendor specific (7772e5db-3868-4112-a1a9-f2669d106bf3)
+> ACL Data RX: Handle 64 flags 0x02 dlen 7                                                  #273 [hci0] 131.208036
+      ATT: Read Response (0x0b) len 2
+        Value[2]: 0000
+        Handle: 0x0018 Type: Appearance (0x2a01)
+        Value[2]: 0000
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #274 [hci0] 131.222764
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0015-0x0017
+        Attribute type: Characteristic (0x2803)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #275 [hci0] 131.222943
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 2
+        #269: len 7 (1 Kb/s)
+        Latency: 29 msec (5-299 msec ~20 msec)
+        #272: len 27 (15 Kb/s)
+        Latency: 14 msec (5-299 msec ~17 msec)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #276 [hci0] 131.222965
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0015
+        Error: Attribute Not Found (0x0a)
+> ACL Data RX: Handle 64 flags 0x02 dlen 9                                                  #277 [hci0] 131.237533
+      ATT: Find Information Request (0x04) len 4
+        Handle range: 0x0016-0x0017
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 14                                #278 [hci0] 131.237774
+      ATT: Find Information Response (0x05) len 9
+        Format: UUID-16 (0x01)
+        Handle: 0x0016
+        UUID: Client Characteristic Configuration (0x2902)
+        Handle: 0x0017
+        UUID: Characteristic User Description (0x2901)
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #279 [hci0] 131.252771
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0018-0x001a
+        Attribute type: Include (0x2802)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #280 [hci0] 131.252994
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0018
+        Error: Attribute Not Found (0x0a)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #281 [hci0] 131.253029
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 2
+        #276: len 9 (2 Kb/s)
+        Latency: 30 msec (5-299 msec ~23 msec)
+        #278: len 14 (7 Kb/s)
+        Latency: 15 msec (5-299 msec ~19 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #282 [hci0] 131.267537
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0018-0x001a
+        Attribute type: Characteristic (0x2803)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 27                                #283 [hci0] 131.268012
+      ATT: Read By Type Response (0x09) len 22
+        Attribute data length: 21
+        Attribute data list: 1 entry
+        Handle: 0x0019
+        Value[19]: 021a00274168e036276e88434fd7b20428496f
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x001a
+            Value UUID: Vendor specific (6f492804-b2d7-4f43-886e-2736e0684127)
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #284 [hci0] 131.282765
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x001a-0x001a
+        Attribute type: Characteristic (0x2803)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #285 [hci0] 131.282941
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 2
+        #280: len 9 (2 Kb/s)
+        Latency: 29 msec (5-299 msec ~24 msec)
+        #283: len 27 (15 Kb/s)
+        Latency: 14 msec (5-299 msec ~19 msec)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #286 [hci0] 131.283030
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x001a
+        Error: Attribute Not Found (0x0a)
+> HCI Event: LE Meta Event (0x3e) plen 11                                                   #287 [hci0] 131.312988
+      LE Remote Connection Parameter Request (0x06)
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Min connection interval: 30.00 msec (0x0018)
+        Max connection interval: 30.00 msec (0x0018)
+        Connection latency: 0 (0x0000)
+        Supervision timeout: 5000 msec (0x01f4)
+< HCI Command: LE Remote Connection Parameter Request Reply (0x08|0x0020) plen 14           #288 [hci0] 131.313028
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Min connection interval: 30.00 msec (0x0018)
+        Max connection interval: 30.00 msec (0x0018)
+        Connection latency: 0 (0x0000)
+        Supervision timeout: 5000 msec (0x01f4)
+        Min connection length: 0.000 msec (0x0000)
+        Max connection length: 0.000 msec (0x0000)
+> HCI Event: Command Complete (0x0e) plen 6                                                 #289 [hci0] 131.315962
+      LE Remote Connection Parameter Request Reply (0x08|0x0020) ncmd 1
+        Status: Success (0x00)
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+> HCI Event: LE Meta Event (0x3e) plen 10                                                   #290 [hci0] 131.409204
+      LE Connection Update Complete (0x03)
+        Status: Success (0x00)
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Connection interval: 30.00 msec (0x0018)
+        Connection latency: 0 (0x0000)
+        Supervision timeout: 5000 msec (0x01f4)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #291 [hci0] 131.545587
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 1
+        #286: len 9 (0 Kb/s)
+        Latency: 262 msec (5-299 msec ~141 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 7                                                  #292 [hci0] 139.028809
+      ATT: Read Request (0x0a) len 2
+        Handle: 0x001a Type: Vendor specific (6f492804-b2d7-4f43-886e-2736e0684127)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #293 [hci0] 139.029190
+      ATT: Error Response (0x01) len 4
+        Read Request (0x0a)
+        Handle: 0x001a
+        Error: Insufficient Encryption (0x0f)
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #294 [hci0] 139.088874
+      SMP: Pairing Request (0x01) len 6
+        IO capability: KeyboardDisplay (0x04)
+        OOB data: Authentication data not present (0x00)
+        Authentication requirement: Bonding, MITM, SC, No Keypresses, CT2 (0x2d)
+        Max encryption key size: 16
+        Initiator key distribution: EncKey IdKey Sign LinkKey (0x0f)
+        Responder key distribution: EncKey IdKey Sign LinkKey (0x0f)
+< ACL Data TX: Handle 64 flags 0x00 dlen 11                                                 #295 [hci0] 139.088967
+      SMP: Pairing Response (0x02) len 6
+        IO capability: NoInputNoOutput (0x03)
+        OOB data: Authentication data not present (0x00)
+        Authentication requirement: Bonding, MITM, SC, No Keypresses, CT2 (0x2d)
+        Max encryption key size: 16
+        Initiator key distribution: EncKey IdKey Sign (0x07)
+        Responder key distribution: EncKey Sign (0x05)
+> ACL Data RX: Handle 64 flags 0x02 dlen 69                                                 #296 [hci0] 139.149708
+      SMP: Pairing Public Key (0x0c) len 64
+        X[32]: f5dd335dd43b80b8dae75af6ffbefe7c08827f8967318ee84e7f2f35930ffae0
+        Y[32]: 78ef64bccb6def019ff86e495b0bb45e5ded5df0468db09485052db3482ab7e1
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #297 [hci0] 139.149826
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 2
+        #293: len 9 (0 Kb/s)
+        Latency: 120 msec (5-299 msec ~130 msec)
+        #295: len 11 (1 Kb/s)
+        Latency: 60 msec (5-299 msec ~95 msec)
+< ACL Data TX: Handle 64 flags 0x00 dlen 69                                                 #298 [hci0] 139.452614
+      SMP: Pairing Public Key (0x0c) len 64
+        X[32]: 08b713a4e94890833716680ada3d45c31cba994d54ddbfa02c150a14ffd26af4
+        Y[32]: d2be5c9c0e248d7ee3bc4baa4ac0b0dea224cd37676f36d9048f3e37eb632291
+< ACL Data TX: Handle 64 flags 0x00 dlen 21                                                 #299 [hci0] 139.452629
+      SMP: Pairing Confirm (0x03) len 16
+        Confim value[16]: 8a6132a964f8e7089d0915ba9b2707a7
+> ACL Data RX: Handle 64 flags 0x02 dlen 21                                                 #300 [hci0] 139.509196
+      SMP: Pairing Random (0x04) len 16
+        Random value[16]: 0e8c6bd74a43bbec89b7eae081e9b81a
+@ MGMT Event: User Confirmation Request (0x000f) plen 12                                {0x0001} [hci0] 139.509246
+        LE Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Confirm hint: 0x01
+        Value: 0x00064c6f
+< ACL Data TX: Handle 64 flags 0x00 dlen 21                                                 #301 [hci0] 139.509257
+      SMP: Pairing Random (0x04) len 16
+        Random value[16]: 1951146f0550116091e9fe6bffa29777
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #302 [hci0] 139.509433
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 2
+        #298: len 69 (9 Kb/s)
+        Latency: 56 msec (5-299 msec ~76 msec)
+        #299: len 21 (3 Kb/s)
+        Latency: 56 msec (5-299 msec ~66 msec)
+bluetoothd[656]: @ MGMT Command: User Confirmation Reply (0x001c) plen 7                {0x0001} [hci0] 139.510279
+        LE Address: 42:6D:9E:34:B1:BB (Resolvable)
+@ MGMT Event: Command Complete (0x0001) plen 10                                         {0x0001} [hci0] 139.510292
+      User Confirmation Reply (0x001c) plen 7
+        Status: Success (0x00)
+        LE Address: 42:6D:9E:34:B1:BB (Resolvable)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #303 [hci0] 139.795628
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 1
+        #301: len 21 (0 Kb/s)
+        Latency: 286 msec (5-299 msec ~176 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 21                                                 #304 [hci0] 143.918986
+      SMP: Pairing DHKey Check (0x0d) len 16
+        E[16]: bc820bde0fdd3c6bd52d82565de9436d
+< ACL Data TX: Handle 64 flags 0x00 dlen 21                                                 #305 [hci0] 143.919040
+      SMP: Pairing DHKey Check (0x0d) len 16
+        E[16]: dd3549efbf335c9d088c166f78f12481
+> HCI Event: LE Meta Event (0x3e) plen 13                                                   #306 [hci0] 143.979566
+      LE Long Term Key Request (0x05)
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Random number: 0x0000000000000000
+        Encrypted diversifier: 0x0000
+< HCI Command: LE Long Term Key Request Reply (0x08|0x001a) plen 18                         #307 [hci0] 143.979591
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Long term key[16]: 5b59d40ba503f1030e38368e5b25b524
+> HCI Event: Command Complete (0x0e) plen 6                                                 #308 [hci0] 143.979902
+      LE Long Term Key Request Reply (0x08|0x001a) ncmd 1
+        Status: Success (0x00)
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+> HCI Event: Encryption Change (0x08) plen 4                                                #309 [hci0] 144.099207
+        Status: Success (0x00)
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Encryption: Enabled with AES-CCM (0x01)
+< HCI Command: Write Authenticated Payload Timeout (0x03|0x007c) plen 4                     #310 [hci0] 144.099245
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Timeout: 30000 msec (0x0bb8)
+< ACL Data TX: Handle 64 flags 0x00 dlen 21                                                 #311 [hci0] 144.099253
+      SMP: Signing Information (0x0a) len 16
+        Signature key[16]: b5361993fd35b14f94b100430685d975
+> HCI Event: Command Complete (0x0e) plen 6                                                 #312 [hci0] 144.099615
+      Write Authenticated Payload Timeout (0x03|0x007c) ncmd 1
+        Status: Success (0x00)
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #313 [hci0] 144.170662
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+        Count: 1
+        #305: len 21 (0 Kb/s)
+        Latency: 251 msec (5-299 msec ~214 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #314 [hci0] 144.188895
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0001-0xffff
+        Attribute type: Server Supported Features (0x2b3a)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #315 [hci0] 144.189077
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0001
+        Error: Attribute Not Found (0x0a)
+> ACL Data RX: Handle 64 flags 0x02 dlen 21                                                 #316 [hci0] 144.219148
+      SMP: Identity Information (0x08) len 16
+        Identity resolving key[16]: 63de8cff6e714b1ef5701300d03c8b0e
+> ACL Data RX: Handle 64 flags 0x02 dlen 12                                                 #317 [hci0] 144.219842
+      SMP: Identity Address Information (0x09) len 7
+        Address: 8C:6A:3B:86:3A:0A (Samsung Electronics Co.,Ltd)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #318 [hci0] 144.219987
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+          Identity type: Public (0x00)
+          Identity: 8C:6A:3B:86:3A:0A (Samsung Electronics Co.,Ltd)
+        Count: 2
+        #311: len 21 (1 Kb/s)
+        Latency: 120 msec (5-299 msec ~167 msec)
+        #315: len 9 (2 Kb/s)
+        Latency: 30 msec (5-299 msec ~99 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 21                                                 #319 [hci0] 144.220435
+      SMP: Signing Information (0x0a) len 16
+        Signature key[16]: a7ec0bf6f1f65468ab93655d5bdc20eb
+@ MGMT Event: New Identity Resolving Key (0x0018) plen 30                               {0x0001} [hci0] 144.220451
+        Store hint: Yes (0x01)
+        Random address: 42:6D:9E:34:B1:BB (Resolvable)
+        LE Address: 8C:6A:3B:86:3A:0A (Samsung Electronics Co.,Ltd)
+        Key[16]: 63de8cff6e714b1ef5701300d03c8b0e
+@ MGMT Event: New Signature Resolving Key (0x0019) plen 25                              {0x0001} [hci0] 144.220461
+        Store hint: Yes (0x01)
+        LE Address: 8C:6A:3B:86:3A:0A (Samsung Electronics Co.,Ltd)
+        Key type: Unauthenticated remote CSRK (0x01)
+        Key[16]: a7ec0bf6f1f65468ab93655d5bdc20eb
+@ MGMT Event: New Signature Resolving Key (0x0019) plen 25                              {0x0001} [hci0] 144.220465
+        Store hint: Yes (0x01)
+        LE Address: 8C:6A:3B:86:3A:0A (Samsung Electronics Co.,Ltd)
+        Key type: Unauthenticated local CSRK (0x00)
+        Key[16]: b5361993fd35b14f94b100430685d975
+@ MGMT Event: New Long Term Key (0x000a) plen 37                                        {0x0001} [hci0] 144.220469
+        Store hint: Yes (0x01)
+        LE Address: 8C:6A:3B:86:3A:0A (Samsung Electronics Co.,Ltd)
+        Key type: Unauthenticated key from P-256 (0x02)
+        Central: 0x00
+        Encryption size: 16
+        Diversifier[2]: 0000
+        Randomizer[8]: 0000000000000000
+        Key[16]: 5b59d40ba503f1030e38368e5b25b524
+> ACL Data RX: Handle 64 flags 0x02 dlen 13                                                 #320 [hci0] 144.728961
+      ATT: Find By Type Value Request (0x06) len 8
+        Handle range: 0x0001-0xffff
+        Attribute type: Primary Service (0x2800)
+          UUID: Generic Attribute Profile (0x1801)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #321 [hci0] 144.729369
+      ATT: Find By Type Value Response (0x07) len 4
+        Handle range: 0x0006-0x000f
+> ACL Data RX: Handle 64 flags 0x02 dlen 7                                                  #322 [hci0] 144.788927
+      ATT: Read Request (0x0a) len 2
+        Handle: 0x001a Type: Vendor specific (6f492804-b2d7-4f43-886e-2736e0684127)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 251                               #323 [hci0] 144.800041
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x01 dlen 119                               #324 [hci0] 144.800074
+      ATT: Read Response (0x0b) len 365
+        Value[109]: 686f726f6461746167653b74656d703b6c75783b7072657373696f6e3b6971610a32362d30382d31325f31353a33303a30303b32302e353b39303b313030303b33350a32362d30382d31325f31363a30303a30303b32312e353b39303b313030303b33350a32362d30382d3132
+        Handle: 0x001a Type: Vendor specific (6f492804-b2d7-4f43-886e-2736e0684127)
+        Value[109]: 686f726f6461746167653b74656d703b6c75783b7072657373696f6e3b6971610a32362d30382d31325f31353a33303a30303b32302e353b39303b313030303b33350a32362d30382d31325f31363a30303a30303b32312e353b39303b313030303b33350a32362d30382d3132
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #325 [hci0] 144.821368
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+          Identity type: Random (0x01)
+          Identity: 8C:6A:3B:86:3A:0A (Reserved)
+        Count: 2
+        #321: len 9 (0 Kb/s)
+        Latency: 91 msec (5-299 msec ~95 msec)
+        #323: len 251 (95 Kb/s)
+        Latency: 21 msec (5-299 msec ~58 msec)
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #326 [hci0] 144.848950
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0001-0xffff
+        Attribute type: Peripheral Preferred Connection Parameters (0x2a04)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #327 [hci0] 144.849246
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0001
+        Error: Attribute Not Found (0x0a)
+> ACL Data RX: Handle 64 flags 0x02 dlen 13                                                 #328 [hci0] 144.909214
+      ATT: Find By Type Value Request (0x06) len 8
+        Handle range: 0x0010-0xffff
+        Attribute type: Primary Service (0x2800)
+          UUID: Generic Attribute Profile (0x1801)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #329 [hci0] 144.909402
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+          Identity type: Random (0x01)
+          Identity: 8C:6A:3B:86:3A:0A (Reserved)
+        Count: 2
+        #324: len 119 (8 Kb/s)
+        Latency: 109 msec (5-299 msec ~83 msec)
+        #327: len 9 (1 Kb/s)
+        Latency: 60 msec (5-299 msec ~72 msec)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #330 [hci0] 144.909485
+      ATT: Error Response (0x01) len 4
+        Find By Type Value Request (0x06)
+        Handle: 0x0010
+        Error: Attribute Not Found (0x0a)
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #331 [hci0] 144.968962
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0001-0x000f
+        Attribute type: Characteristic (0x2803)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 41                                #332 [hci0] 144.969289
+      ATT: Read By Type Response (0x09) len 36
+        Attribute data length: 7
+        Attribute data list: 5 entries
+        Handle: 0x0002
+        Value[5]: 020300002a
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x0003
+            Value UUID: Device Name (0x2a00)
+        Handle: 0x0004
+        Value[5]: 020500012a
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x0005
+            Value UUID: Appearance (0x2a01)
+        Handle: 0x0007
+        Value[5]: 200800052a
+            Properties: 0x20
+              Indicate (0x20)
+            Value Handle: 0x0008
+            Value UUID: Service Changed (0x2a05)
+        Handle: 0x000a
+        Value[5]: 0a0b00292b
+            Properties: 0x0a
+              Read (0x02)
+              Write (0x08)
+            Value Handle: 0x000b
+            Value UUID: Client Supported Features (0x2b29)
+        Handle: 0x000c
+        Value[5]: 020d002a2b
+            Properties: 0x02
+              Read (0x02)
+            Value Handle: 0x000d
+            Value UUID: Database Hash (0x2b2a)
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #333 [hci0] 145.029211
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x000d-0x000f
+        Attribute type: Characteristic (0x2803)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #334 [hci0] 145.029394
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+          Identity type: Random (0x01)
+          Identity: 8C:6A:3B:86:3A:0A (Reserved)
+        Count: 2
+        #330: len 9 (0 Kb/s)
+        Latency: 119 msec (5-299 msec ~95 msec)
+        #332: len 41 (5 Kb/s)
+        Latency: 60 msec (5-299 msec ~78 msec)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #335 [hci0] 145.029561
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x000d
+        Error: Attribute Not Found (0x0a)
+> ACL Data RX: Handle 64 flags 0x02 dlen 9                                                  #336 [hci0] 145.088950
+      ATT: Find Information Request (0x04) len 4
+        Handle range: 0x0008-0x000f
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 30                                #337 [hci0] 145.089273
+      ATT: Find Information Response (0x05) len 25
+        Format: UUID-16 (0x01)
+        Handle: 0x0008
+        UUID: Service Changed (0x2a05)
+        Handle: 0x0009
+        UUID: Client Characteristic Configuration (0x2902)
+        Handle: 0x000a
+        UUID: Characteristic (0x2803)
+        Handle: 0x000b
+        UUID: Client Supported Features (0x2b29)
+        Handle: 0x000c
+        UUID: Characteristic (0x2803)
+        Handle: 0x000d
+        UUID: Database Hash (0x2b2a)
+> ACL Data RX: Handle 64 flags 0x02 dlen 9                                                  #338 [hci0] 145.149189
+      ATT: Find Information Request (0x04) len 4
+        Handle range: 0x000e-0x000f
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #339 [hci0] 145.149379
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+          Identity type: Random (0x01)
+          Identity: 8C:6A:3B:86:3A:0A (Reserved)
+        Count: 2
+        #335: len 9 (0 Kb/s)
+        Latency: 119 msec (5-299 msec ~98 msec)
+        #337: len 30 (4 Kb/s)
+        Latency: 60 msec (5-299 msec ~79 msec)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #340 [hci0] 145.149532
+      ATT: Error Response (0x01) len 4
+        Find Information Request (0x04)
+        Handle: 0x000e
+        Error: Attribute Not Found (0x0a)
+> ACL Data RX: Handle 64 flags 0x02 dlen 9                                                  #341 [hci0] 145.208945
+      ATT: Write Request (0x12) len 4
+        Handle: 0x0009 Type: Client Characteristic Configuration (0x2902)
+        Value Handle: 0x0008 Type: Service Changed (0x2a05)
+          Data[2]: 0200
+            Indication (0x02)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 5                                 #342 [hci0] 145.209322
+      ATT: Write Response (0x13) len 0
+> ACL Data RX: Handle 64 flags 0x02 dlen 11                                                 #343 [hci0] 145.269203
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0001-0xffff
+        Attribute type: Server Supported Features (0x2b3a)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #344 [hci0] 145.269390
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+          Identity type: Random (0x01)
+          Identity: 8C:6A:3B:86:3A:0A (Reserved)
+        Count: 2
+        #340: len 9 (0 Kb/s)
+        Latency: 119 msec (5-299 msec ~99 msec)
+        #342: len 5 (0 Kb/s)
+        Latency: 60 msec (5-299 msec ~79 msec)
+bluetoothd[656]: < ACL Data TX: Handle 64 flags 0x00 dlen 9                                 #345 [hci0] 145.269545
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0001
+        Error: Attribute Not Found (0x0a)
+> HCI Event: Number of Completed Packets (0x13) plen 5                                      #346 [hci0] 145.545718
+        Num handles: 1
+        Handle: 64 Address: 42:6D:9E:34:B1:BB (Resolvable)
+          Identity type: Random (0x01)
+          Identity: 8C:6A:3B:86:3A:0A (Reserved)
+        Count: 1
+        #345: len 9 (0 Kb/s)
+        Latency: 276 msec (5-299 msec ~178 msec)
+
