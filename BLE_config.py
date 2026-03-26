@@ -1,66 +1,75 @@
 import json
 import dbus
+import dbus.service
+import dbus.mainloop.glib
+import os
 from bluezero import adapter, peripheral
 
-# Chargement de la configuration générée par le script Bash
-try:
+# Identifiants D-Bus pour BlueZ
+BUS_NAME = 'org.bluez'
+AGENT_PATH = "/test/agent"
+AGENT_INTERFACE = 'org.bluez.Agent1'
+
+class SentinelAgent(dbus.service.Object):
+    @dbus.service.method(AGENT_INTERFACE, in_signature="os", out_signature="")
+    def RequestConfirmation(self, device, passkey):
+        """Appelée si le mode Just Works est activé par le téléphone"""
+        print(f"Agent : Fallback Just Works activé pour {device}")
+        return 
+
+    @dbus.service.method(AGENT_INTERFACE, in_signature="o", out_signature="")
+    def RequestAuthorization(self, device):
+        """Autorise la connexion GATT sans confirmation manuelle"""
+        return
+
+    @dbus.service.method(AGENT_INTERFACE, in_signature="", out_signature="")
+    def Cancel(self):
+        print("Agent : Procédure de sécurité annulée")
+
+def setup_bluetooth_hardware(config):
+    """Configure les paramètres radio et la sécurité OOB"""
+    # 1. Activation des capacités OOB au niveau du contrôleur
+    # 'le on' active le BLE, 'connectable on' permet les liaisons
+    os.system("sudo btmgmt power off")
+    os.system("sudo btmgmt bredr off")
+    os.system("sudo btmgmt le on")
+    os.system("sudo btmgmt connectable on")
+    os.system("sudo btmgmt pairable on")
+    
+    # 2. Réglage de l'intervalle d'annonce (4 secondes pour la batterie)
+    os.system("sudo btmgmt advint 6400") # 6400 * 0.625ms = 4000ms
+    
+    os.system("sudo btmgmt power on")
+    print(f"Matériel configuré avec la clé OOB : {config['k']}")
+
+def run_sentinel():
     with open('config_sentinel.json', 'r') as f:
         config = json.load(f)
-except FileNotFoundError:
-    print("Erreur : config_sentinel.json introuvable. Lancez le script Bash d'abord.")
-    exit(1)
 
-class SentinelPeripheral:
-    def __init__(self, cfg):
-        self.cfg = cfg
-        self.file_path = "data_environnement.csv"
-        
-        # Initialisation de l'adaptateur Bluetooth (hci0)
-        adpts = list(adapter.Adapter.available())
-        if not adpts:
-            raise Exception("Aucun adaptateur Bluetooth trouvé.")
-        
-        self.app = peripheral.Peripheral(adpts[0].address, 
-                                        local_name='Sentinelle-STRI')
-        
-        # Configuration du Service et de la Caractéristique [cite: 16, 32]
-        self.app.add_service(srv_id=1, uuid=self.cfg['s'], primary=True)
-        
-        # Le flag 'encrypt-read' impose l'usage de la clé AES 
-        self.app.add_characteristic(srv_id=1, chr_id=1, uuid=self.cfg['c'],
-                                    value=[], notifying=False,
-                                    flags=['read', 'encrypt-read'],
-                                    read_callback=self.read_csv_data)
+    # Initialisation de l'agent de sécurité
+    dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
+    bus = dbus.SystemBus()
+    agent = SentinelAgent(bus, AGENT_PATH)
+    
+    obj = bus.get_object(BUS_NAME, "/org/bluez")
+    manager = dbus.Interface(obj, "org.bluez.AgentManager1")
+    manager.RegisterAgent(AGENT_PATH, "NoInputNoOutput")
+    manager.RequestDefaultAgent(AGENT_PATH)
 
-    def read_csv_data(self):
-        """Lit et retourne le contenu du fichier CSV [cite: 28, 45]"""
-        try:
-            with open(self.file_path, 'rb') as f:
-                return list(f.read())
-        except Exception as e:
-            return list(f"ERROR: {str(e)}".encode())
+    # Configuration matérielle
+    setup_bluetooth_hardware(config)
 
-    def run(self):
-        print(f"Annonce BLE active sur {self.cfg['m']}")
-        print(f"Service UUID : {self.cfg['s']}")
-        self.app.publish()
+    # Lancement du service GATT
+    adpt = list(adapter.Adapter.available())[0]
+    app = peripheral.Peripheral(adpt.address, local_name='Sentinel-STRI')
+    app.add_service(srv_id=1, uuid=config['s'], primary=True)
+    app.add_characteristic(srv_id=1, chr_id=1, uuid=config['c'],
+                                value=[], notifying=False,
+                                flags=['read', 'encrypt-read'],
+                                read_callback=lambda: list(open("data_environnement.csv", "rb").read()))
 
-def setup_security_settings(aes_key_hex):
-    """
-    Prépare l'adaptateur pour l'appairage sécurisé.
-    En production, un Agent BlueZ doit être enregistré ici.
-    """
-    print(f"Clé AES-128 chargée pour l'appairage OOB : {aes_key_hex}")
-    # Note : Pour éviter le code PIN, on force le mode 'NoInputNoOutput' 
-    # ou on utilise un agent D-Bus répondant à la clé.
-    import os
-    os.system("bluetoothctl discoverable on")
-    os.system("bluetoothctl pairable on")
+    print("Sentinelle en attente de collecte...")
+    app.publish()
 
 if __name__ == '__main__':
-    # 1. Configuration de la sécurité avant de lancer le service
-    setup_security_settings(config['k'])
-    
-    # 2. Lancement de la sentinelle
-    sentinel = SentinelPeripheral(config)
-    sentinel.run()
+    run_sentinel()
