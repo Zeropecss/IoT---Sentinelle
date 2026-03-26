@@ -30,6 +30,7 @@ def setup_bluetooth_hardware(config):
     """Configure les paramètres radio et la sécurité OOB"""
     # 1. Activation des capacités OOB au niveau du contrôleur
     # 'le on' active le BLE, 'connectable on' permet les liaisons
+    os.system("sudo rfkill unblock bluetooth")
     os.system("sudo btmgmt power off")
     os.system("sudo btmgmt bredr off")
     os.system("sudo btmgmt le on")
