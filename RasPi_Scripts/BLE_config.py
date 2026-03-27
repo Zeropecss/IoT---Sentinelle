@@ -44,7 +44,7 @@ def setup_bluetooth_hardware(config):
     print(f"Matériel configuré avec la clé OOB : {config['k']}")
 
 def run_sentinel():
-    with open('config_sentinel.json', 'r') as f:
+    with open('Data/config_sentinel.json', 'r') as f:
         config = json.load(f)
 
     # Initialisation de l'agent de sécurité
@@ -67,7 +67,7 @@ def run_sentinel():
     app.add_characteristic(srv_id=1, chr_id=1, uuid=config['c'],
                                 value=[], notifying=False,
                                 flags=['read', 'encrypt-read'],
-                                read_callback=lambda: list(open("data_environnement.csv", "rb").read()))
+                                read_callback=lambda: list(open("Data/data_environnement.csv", "rb").read()))
 
     print("Sentinelle en attente de collecte...")
     app.publish()
